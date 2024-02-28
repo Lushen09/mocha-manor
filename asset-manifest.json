@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mocha-manor/static/css/main.9ec312c2.css",
-    "main.js": "/mocha-manor/static/js/main.10782cbe.js",
+    "main.js": "/mocha-manor/static/js/main.7920773b.js",
     "static/media/Testimonial2.jpg": "/mocha-manor/static/media/Testimonial2.9dc808fb13ca3caa03f4.jpg",
     "static/media/Testimonial3.jpg": "/mocha-manor/static/media/Testimonial3.6c0f0a3f3d2658c16b9e.jpg",
     "static/media/Staff2.jpg": "/mocha-manor/static/media/Staff2.369352b8448e8e0b700a.jpg",
@@ -30,10 +30,10 @@
     "static/media/divider.svg": "/mocha-manor/static/media/divider.421f31d1c47e7b7caaae419ca0bcc98a.svg",
     "index.html": "/mocha-manor/index.html",
     "main.9ec312c2.css.map": "/mocha-manor/static/css/main.9ec312c2.css.map",
-    "main.10782cbe.js.map": "/mocha-manor/static/js/main.10782cbe.js.map"
+    "main.7920773b.js.map": "/mocha-manor/static/js/main.7920773b.js.map"
   },
   "entrypoints": [
     "static/css/main.9ec312c2.css",
-    "static/js/main.10782cbe.js"
+    "static/js/main.7920773b.js"
   ]
 }
