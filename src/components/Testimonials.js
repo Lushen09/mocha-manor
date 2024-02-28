@@ -1,8 +1,13 @@
-import React from 'react'
+import React, {useRef} from 'react'
+import useScrollAnimation from '../custom-hooks/useScrollAnimation';
 import '../styles/testimonials-styles.css'
 import Divider from '../images/Utility/divider.svg'
 
 const Testimonials = () => {
+
+    const componentRef = useRef(null);
+    const isVisible = useScrollAnimation(componentRef);
+
     return (
         <div className='testimonials'>
             <img src={Divider} alt='divider' className='divider rotate' />
@@ -18,13 +23,13 @@ const Testimonials = () => {
                             <h2 className='testimonial-heading'>What Our Customers Say About Us</h2>
                         </div>
 
-                        <div className='testimonials-col-2 text'>
+                        <div className='testimonials-col-2'>
                             <button>Menu</button>
                         </div>
 
                     </div>
 
-                    <div className='testimonials-gallery'>
+                    <div ref={componentRef} className={isVisible ? 'testimonials-gallery slide-in' : 'hidden'}>
                             
                             <div className='testimonials-gallery-item'>
                                 <div className='testimonials-gallery-item-text'>

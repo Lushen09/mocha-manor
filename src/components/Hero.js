@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../styles/hero-styles.css'
 import Logo from '../images/Hero/coffee-logo.png'
 import Divider from '../images/Utility/divider.svg'
@@ -9,11 +9,6 @@ import { Link } from 'react-router-dom'
 
 const Hero = () => {
 
-    const [isVisible, setIsVisible] = useState(false);
-
-    const toggleNav = () => {
-        setIsVisible(!isVisible);
-    }
 
     return (
         <div className='hero'>
@@ -21,7 +16,7 @@ const Hero = () => {
 
             <div className='container'>
 
-                <div className='hero-content text-center text-light'>
+                <div className='hero-content text-center text-light slide-in'>
 
                     <div className='container logo-section'>
                         <img src={Logo} alt='coffee logo' className='coffee-logo' />

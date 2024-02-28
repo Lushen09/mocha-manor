@@ -1,10 +1,15 @@
-import React from 'react'
+import React, {useRef} from 'react'
+import useScrollAnimation from '../custom-hooks/useScrollAnimation';
 import '../styles/contact-styles.css'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Divider from '../images/Utility/divider.svg'
 
 const Contact = () => {
+
+    const componentRef = useRef(null);
+    const isVisible = useScrollAnimation(componentRef);
+
     return (
         <div>
 
@@ -12,7 +17,7 @@ const Contact = () => {
                 <Navbar />
 
                 <div className='container'>
-                    <div className='contact-text text-center'>
+                    <div className='contact-text text-center slide-in'>
                         <h2>Contact Us</h2>
                         <p>Have a question or comment? We'd love to hear from you. Get in touch with us and we will be more than happy to chat.</p>
                     </div>
@@ -21,7 +26,7 @@ const Contact = () => {
                 <img src={Divider} alt='divider' className='divider' />
             </div>
 
-            <div className='contact-section'>
+            <div ref={componentRef} className={isVisible ? 'contact-section slide-in' : 'hidden'}>
                 <div className='container'>
                     <div className='contact-options text-center'>
                         <h3>Call Us</h3>

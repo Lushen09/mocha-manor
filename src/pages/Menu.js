@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
+import useScrollAnimation from '../custom-hooks/useScrollAnimation';
 import '../styles/menu-styles.css'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -6,6 +7,9 @@ import { MenuData } from '../components/MenuData'
 import Divider from '../images/Utility/divider.svg'
 
 const Menu = () => {
+
+    const componentRef = useRef(null);
+    const isVisible = useScrollAnimation(componentRef);
 
     const { drinks, meals, desserts } = MenuData;
 
@@ -23,8 +27,7 @@ const Menu = () => {
         <div className='menu'>
             <div className='menu-header'>
                 <Navbar />
-                <img src={Divider} alt='divider' className='divider
-                ' />
+                <img src={Divider} alt='divider' className='divider' />
             </div>
 
             
@@ -32,24 +35,24 @@ const Menu = () => {
             <div className='menu-padding'>
                 <div className='container'>
 
-                    <div className='text-center'>
+                    <div className='text-center slide-in'>
                         <h2>MENU</h2>
                         <p>Our menu is filled with delicious meals, desserts, and drinks. We have something for everyone!</p>
                     </div>
 
 
-                    <div className='menu-selector text-center'>
+                    <div className='menu-selector text-center slide-in'>
                         <button  onClick={() => handleClick(drinks)}>Drinks</button>
                         <button  onClick={() => handleClick(meals)}>Meals</button>
                         <button  onClick={() => handleClick(desserts)}>Desserts</button>
                     </div>
 
-                    <div className='menu-items'>
+                    <div ref={componentRef} className={isVisible ? 'menu-items slide-in' : 'hidden'}>
 
                         {
                             currentMenu.map((currentMenu) => {
                                 return (
-                                    <div className='menu-item container'>
+                                    <div className='menu-item container ' >
                                         <img src={currentMenu.image} alt='espresso' className='menu-icon' />
                                         <div>
                                             <h4>{currentMenu.name}</h4>

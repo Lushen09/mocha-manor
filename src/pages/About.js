@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import useScrollAnimation from '../custom-hooks/useScrollAnimation';
 // Re uses the same styles as the about and testimonials section on the home page so we can import them here
 import '../styles/about-styles.css';
 import '../styles/about-page-styles.css';
@@ -10,6 +11,11 @@ import Divider from '../images/Utility/divider.svg';
 
 
 const About = () => {
+
+
+  const componentRef = useRef(null);
+  const isVisible = useScrollAnimation(componentRef);
+
   return (
     <div>
 
@@ -19,7 +25,7 @@ const About = () => {
 
         <div className='container'>
 
-          <div className='about-hero-content text-center text-light'>
+          <div className='about-hero-content text-center text-light slide-in'>
             <p className='gold-text'>Our Story</p>
             <h1>About Us</h1>
             <p className='grey-text'>Our story begins in the heart of the Southwest, where coffee is more than just a drink, it's a way of life. We believe in crafting moments, one cup at a time, where every sip tells a story. Our mission is to bring people together through the art of coffee, and to create a space where everyone feels welcome.</p>
@@ -50,7 +56,7 @@ const About = () => {
       </div>
 
 
-      <div className='about-background testimonials-gallery text-center'>
+      <div ref={componentRef} className={isVisible ? 'about-background testimonials-gallery text-center slide-in' : 'hidden'}>
 
         <div className='about-gallery-item'>
           <div className='testimonials-gallery-item-text'>

@@ -22,7 +22,7 @@ const Navbar = () => {
                     
                     <nav className='nav-lg text-light'>
                         <ul>
-                            <li><Link to='/'>Home</Link></li>
+                            <li><Link to='/mocha-manor'>Home</Link></li>
                             <li><Link to='/about'>About</Link></li>
                             <li><Link to='/location'>Location</Link></li>
                             <li><Link to='/contact'>Contact</Link></li>
@@ -41,7 +41,7 @@ const Navbar = () => {
 
             <nav className={isVisible ? 'nav-sm' : 'nav-sm-hide'}>
                 <ul className='menu-list'>
-                    <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/mocha-manor'>Home</Link></li>
                     <li><Link to='/about'>About</Link></li>
                     <li><Link to='/location'>Location</Link></li>
                     <li><Link to='/contact'>Contact</Link></li>

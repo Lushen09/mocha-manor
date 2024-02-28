@@ -1,9 +1,14 @@
-import React from 'react'
+import React, {useRef} from 'react'
+import useScrollAnimation from '../custom-hooks/useScrollAnimation';
 import '../styles/about-styles.css'
 import AboutImg from '../images/About/about.jpg'
 import { Link } from 'react-router-dom'
 
 const AboutComponent = () => {
+
+    const componentRef = useRef(null);
+    const isVisible = useScrollAnimation(componentRef);
+
     return (
         <div className='about'>
 
@@ -11,7 +16,7 @@ const AboutComponent = () => {
 
                 <div className='container'>
 
-                    <div className='about-content'>
+                    <div ref={componentRef} className={isVisible ? 'about-content slide-in' : 'hidden'}>
 
                         <img src={AboutImg} alt='AboutImage' className='about-image about-grid' />
 

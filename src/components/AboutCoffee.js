@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import useScrollAnimation from '../custom-hooks/useScrollAnimation';
 import '../styles/about-coffee-styles.css'
 
 
 const AboutCoffee = () => {
+
+    const componentRef = useRef(null);
+    const isVisible = useScrollAnimation(componentRef);
+
     return (
         <div className='about-coffee'>
 
             <div className='about-coffee-padding'>
 
-                <div className='container'>
+                <div ref={componentRef} className={isVisible ? 'container slide-in' : 'hidden'}>
 
                     <div className='about-coffee-text'>
                         <p className='gold-text'>Our Coffee</p>

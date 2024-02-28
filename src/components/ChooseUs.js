@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useRef} from 'react'
+import useScrollAnimation from '../custom-hooks/useScrollAnimation';
 import '../styles/choose-styles.css'
 import Coffee from '../images/ChooseUs/coffee.png'
 import Machine from '../images/ChooseUs/machine.png'
@@ -6,10 +7,14 @@ import Cake from '../images/ChooseUs/cake.png'
 import Divider from '../images/Utility/divider.svg'
 
 const ChooseUs = () => {
+
+    const componentRef = useRef(null);
+    const isVisible = useScrollAnimation(componentRef);
+
     return (
         <div className='choose-us'>
 
-            <div className='container'>
+            <div ref={componentRef} className={isVisible ? 'container slide-in' : 'hidden'}>
 
                 <div className='choose-us-text text-center'>
                     <p className='gold-text'>Why Us</p>

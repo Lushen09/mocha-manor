@@ -10,7 +10,7 @@ const Location = () => {
             <div className='location'>
                 <Navbar />
 
-                <div className='container location-text text-center'>
+                <div className='container location-text text-center slide-in'>
                     <p className='gold-text'>Location</p>
                     <h2>Come Take The Taste Test</h2>
 
