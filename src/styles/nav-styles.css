@@ -83,12 +83,11 @@ button:hover {
 .toggle {
     font-size: 35px;
     display: none;
+    color: white;
 }
 .toggle a, a:hover{
         color: white;
         text-decoration: none;
-    
-    
 }
 
 
@@ -130,10 +129,11 @@ button:hover {
     
     .nav-sm {
         background-color: white;
-        ul li {
-            list-style-type: none;
-            padding: 10px 20px;
-        }
+    }
+
+    .nav-sm ul li {
+        list-style-type: none;
+        padding: 10px 20px;
     }
     
     .nav-sm ul li a {
