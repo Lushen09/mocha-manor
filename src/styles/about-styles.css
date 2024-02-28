@@ -1,0 +1,41 @@
+.about-padding {
+    padding: 100px 0;
+}
+
+.about-content {
+    display: grid;
+    gap: 1rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+        'one two';
+    justify-items: center;
+    align-items: center;
+}
+
+.about-grid:nth-child(1) {
+    grid-area: one;
+}
+
+.about-grid:nth-child(2) {
+    grid-area: two;
+}
+
+.about-image {
+    width: 100%;
+}
+
+.about-text {
+    width: 70%;
+}
+
+@media (max-width: 992px) {
+    .about-content {
+        grid-template-areas:
+            'two'
+            'one';
+    }
+
+    .about-text {
+        width: 100%;
+    }
+}

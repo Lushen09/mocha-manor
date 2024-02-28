@@ -1,0 +1,36 @@
+.coffee-logo {
+    height: 30svh;
+}
+
+.hero {
+    z-index: -1;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.37) ), url('../images/Hero/hero1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.hero-content {
+    padding: 150px 0px 200px 0px;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+/* Mobile styles */
+
+@media (max-width: 576px) {
+    .hero {
+        background-attachment:scroll;
+    }
+
+    .hero-content {
+        padding: 250px 0px 100px 0px;
+    }
+
+    .coffee-logo {
+        height: 25svh;
+    }
+}

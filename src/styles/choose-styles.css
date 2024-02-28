@@ -1,0 +1,33 @@
+.choose-us {
+    padding: 50px 0;
+}
+
+.choose-us-text {
+    padding-bottom: 50px;
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.icon-grid-item {
+    h3 {
+        padding: 20px 0;
+    }
+}
+
+.icon-image {
+    height: 130px
+}
+
+@media (max-width: 992px) {
+    .icon-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .icon-image {
+        height: 100px
+    }
+}
