@@ -11,7 +11,7 @@
 
 .nav-icon {
     height: 3rem;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 }
 
 .nav-container {
@@ -29,38 +29,32 @@
     justify-content: flex-end;
 }
 
-.nav-lg {
-    li {
+.nav-lg ul li {
         list-style-type: none;
         display: inline-block;
         padding: 10px 20px;
-    }
+    
 }
 
-.nav-lg {
-    a {
+.nav-lg ul li a {
         text-decoration: none;
         color: white;
         font-size: 1.2em;
         font-weight: 500;
-    }
+    
 }
 
-.nav-lg {
-    a:hover {
+.nav-lg ul li a:hover {
         color: rgb(158, 125, 33);
         transition: 0.3s;
-    }
+    
 }
 
 .nav-sm-hide {
     height: 0px;
-
-    ul,
-    li a,
-    button {
+    ul, li a, button {
         display: none;
-
+    
     }
 
     transition: 0.3s ease-in-out;
@@ -83,22 +77,18 @@ button {
 button:hover {
     color: white;
     background-color: rgb(158, 125, 33);
-    transition: 0.3s;
+    transition: 0.3s ;
 }
 
 .toggle {
     font-size: 35px;
     display: none;
-    color: white;
 }
-
-.toggle {
-
-    a, a:hover {
-        color: rgb(158, 125, 33);
+.toggle a, a:hover{
+        color: white;
         text-decoration: none;
-    }
-
+    
+    
 }
 
 
@@ -109,13 +99,13 @@ button:hover {
         display: none;
     }
 
-    .responsive-navbar {
+    .responsive-navbar{
         display: flex;
 
         h2 {
             display: block;
             position: relative;
-            top: 2%;
+            top:2%;
             font-size: 1.8rem;
         }
     }
@@ -137,37 +127,34 @@ button:hover {
         transition: 0.3s ease-in-out;
 
     }
-
+    
     .nav-sm {
         background-color: white;
-
-        li {
+        ul li {
             list-style-type: none;
             padding: 10px 20px;
         }
     }
-
-    .nav-sm {
-        a {
+    
+    .nav-sm ul li a {
             text-decoration: none;
             color: black;
             font-size: 1.2em;
             font-weight: 500;
-        }
+        
     }
-
-    .nav-sm {
-        a:hover {
+    
+    .nav-sm ul li a:hover {
             color: rgb(158, 125, 33);
             transition: 0.3s;
-        }
+        
     }
 
     .mobile-button {
         background-color: rgb(0, 0, 0);
         color: white;
     }
-
+    
     button:hover {
         color: rgb(255, 255, 255);
         background-color: rgb(158, 125, 33);
