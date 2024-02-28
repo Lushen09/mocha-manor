@@ -39,8 +39,8 @@ const Footer = () => {
 
                         <div className='footer-column'>
                             <p>&#169; 2024 Mocha Manor</p>
-                            <p><a href='#'>Privacy Policy</a></p>
-                            <p><a href='#'>Terms of Service</a></p>
+                            <p><a>Privacy Policy</a></p>
+                            <p><a>Terms of Service</a></p>
                             <p>Design by <a href='https://webflow.com/'>Webflow</a></p>
                         </div>
                     </footer>

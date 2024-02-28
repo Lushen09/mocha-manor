@@ -32,7 +32,7 @@ const Navbar = () => {
 
                     </nav>
                     <div className='toggle'>
-                        <a href='#' onClick={toggleNav}><ion-icon name={!isVisible ? "menu-outline" : "close-outline"}></ion-icon></a>
+                        <a onClick={toggleNav}><ion-icon name={!isVisible ? "menu-outline" : "close-outline"}></ion-icon></a>
                     </div>
                 </div>
                 <div className='nav-border'></div>

@@ -15,7 +15,7 @@ function App() {
 
       <ScrollToTop />
       <Routes>
-        <Route index path="/" element={<Home />} />
+        <Route index path="/mocha-manor" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="location" element={<Location />} />
         <Route path="contact" element={<Contact />} />
